@@ -27,27 +27,28 @@ public class OptionsController {
     private BookFormService bookFormService = new BookFormServiceImpl();
 
 
-    @RequestMapping(value = "/options/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
     public String options(BookForm bookForm) {
 
         bookFormService.addBookForm(bookForm);
 
-        return "redirect:/options";
+        return "addNewBook";
     }
 
     @RequestMapping(value = "/valid", method = RequestMethod.POST)
     public String checkBookName(@Valid BookForm bookForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "/optons";
+            return "addNewBook";
         } else bookFormService.addBookForm(bookForm);
         return "redirect:/options";
     }
 
     @RequestMapping(value = "/options")
-    public String getAllById(Model model, String id) {
-        List<BookForm> bookForms = bookFormService.getAllById(id);
+    public String getAll(Model model) {
+        List<BookForm> bookForms = bookFormService.getAll();
         model.addAttribute("optionsList", bookForms );
-        return "/addNewBook";
+        System.out.println(bookForms);
+        return "created";
     }
 
     @RequestMapping(value = "/options/delete{id}", method = RequestMethod.GET)

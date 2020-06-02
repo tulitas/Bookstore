@@ -12,8 +12,6 @@ public interface BookFormRepository extends CrudRepository<BookForm, Long> {
             " bookpages, bookprice from bookstore order by id desc ", nativeQuery = true)
     List<BookForm> getAllById();
 
-
-
-   
-    
+    @Query(value = "select * from bookstore order by id desc", nativeQuery = true)
+    List<BookForm> getAll();
 }

@@ -129,11 +129,7 @@
 
         }
 
-        table {
-            position: absolute;
-            top: 200px;
-            left: 210px;
-        }
+
 
 
     </style>
@@ -141,11 +137,12 @@
     <title>Title</title>
 </head>
 <body>
+
 <style>body {background: #999999}</style>
 <br/>
 
 <div style="float: right">
-    <form action="${pageContext.request.contextPath}/valid" method="post">
+    <form action="${pageContext.request.contextPath}create" method="post">
         <label for="enterbookauthor">Enter Book Author</label><br/>
         <input type="text" name="bookauthor" id="enterbookauthor" size="40"/><br/>
 
@@ -182,7 +179,6 @@
         <br/>
         <br/>
         <br/>
-        <!--        <input type="submit" value="Pievienot"/>-->
         <p>
 
             <button class="add_button">Add Book</button>
@@ -191,38 +187,14 @@
 
     </form>
 
-    <table style="word-wrap: break-word" border="7">
-        <tr>
-            <th>Author</th>
-            <th>Book Name</th>
-            <th>Book Genre</th>
-            <th>Book Title</th>
-            <th>Book Pages</th>
-            <th>Book Price</th>
-            <th>Action</th>
-        </tr>
 
-        <c:forEach var="JobForm" items="${optionsList}">
-
-            <tr>
-                <td width="75">${JobForm.bookauthor}</td>
-                <td width="50">${JobForm.bookname}</td>
-                <td width="50">${JobForm.bookgenre}</td>
-                <td width="50">${JobForm.booktitle}</td>
-                <td width="50">${JobForm.bookpages}</td>
-                <td width="50">${JobForm.bookprice}</td>
-                <td width="50"><a href="/options/delete${JobForm.id}">Delete</a></td>
-
-            </tr>
-        </c:forEach>
-    </table>
 
 </div>
 <br/>
 <div style="height: 200px; width: 120px; border: 3px dashed #e03c32; float: left">
     <p>
         <strong><a href="/">Menu</a></strong> <br/>
-
+        <a href="${pageContext.request.contextPath}options">Book List</a>
     </p>
 </div>
 

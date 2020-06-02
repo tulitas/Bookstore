@@ -17,7 +17,7 @@ public class BookForm {
     private String bookauthor;
 
 
-    @Column(name = "bookname")
+    @Column(name = "bookname", unique = true)
     private String bookname;
 
     @Column(name = "bookgenre")

@@ -35,4 +35,9 @@ public class BookFormServiceImpl implements BookFormService {
     public List<BookForm> getAllById(String id) {
         return bookFormRepository.getAllById();
     }
+
+    @Override
+    public List<BookForm> getAll() {
+        return bookFormRepository.getAll();
+    }
 }

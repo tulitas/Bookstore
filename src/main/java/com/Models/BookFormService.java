@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface BookFormService {
 
-    void addBookForm(BookForm contact);
+    void addBookForm(BookForm bookForm);
 
 
     List<BookForm> listBookForm();
@@ -16,4 +16,5 @@ public interface BookFormService {
 
     List<BookForm> getAllById(String id);
 
+    List<BookForm> getAll();
 }
