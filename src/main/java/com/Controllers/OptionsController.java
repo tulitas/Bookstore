@@ -38,9 +38,11 @@ public class OptionsController {
     @RequestMapping(value = "/valid", method = RequestMethod.POST)
     public String checkBookName(@Valid BookForm bookForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
+            System.out.println("name exist");
             return "addNewBook";
         } else bookFormService.addBookForm(bookForm);
-        return "redirect:/options";
+        System.out.println("book created");
+        return "redirect:/addNewBook";
     }
 
     @RequestMapping(value = "/options")

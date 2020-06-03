@@ -142,7 +142,7 @@
 <br/>
 
 <div style="float: right">
-    <form action="${pageContext.request.contextPath}create" method="post">
+    <form action="${pageContext.request.contextPath}valid" method="post">
         <label for="enterbookauthor">Enter Book Author</label><br/>
         <input type="text" name="bookauthor" id="enterbookauthor" size="40"/><br/>
 
