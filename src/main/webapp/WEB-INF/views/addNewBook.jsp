@@ -1,3 +1,5 @@
+<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: SergejK
@@ -142,13 +144,14 @@
 <br/>
 
 <div style="float: right">
-    <form action="${pageContext.request.contextPath}valid" method="post">
+    <form action="${pageContext.request.contextPath}create" method="post">
         <label for="enterbookauthor">Enter Book Author</label><br/>
         <input type="text" name="bookauthor" id="enterbookauthor" size="40"/><br/>
 
         <br/>
         <label for="enterbookname">Enter Book Name</label><br/>
-        <input id="enterbookname" type="text" name="bookname" size="40"/>
+        <input id="enterbookname" type="text" name="bookname" size="40" />
+
         <br/>
 
         <label for="enterbooktitle">Enter Book Title</label><br/>

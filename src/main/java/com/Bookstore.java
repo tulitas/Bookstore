@@ -20,5 +20,6 @@ import org.springframework.context.annotation.Configuration;
     protected SpringApplicationBuilder configure(SpringApplicationBuilder applicationBuilder) {
         return applicationBuilder.sources(Bookstore.class);
     }
+
     }
 

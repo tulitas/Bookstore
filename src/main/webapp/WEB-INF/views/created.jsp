@@ -30,6 +30,7 @@
         <th>Book Pages</th>
         <th>Book Price</th>
         <th>Action</th>
+        <th>ID</th>
     </tr>
 
     <c:forEach var="bookForm" items="${optionsList}">
@@ -43,7 +44,7 @@
             <td width="50">${bookForm.bookpages}</td>
             <td width="50">${bookForm.bookprice}</td>
             <td width="50"><a href="/options/delete${bookForm.id}">Delete</a></td>
-
+            <td width="50">${bookForm.id}</td>
         </tr>
     </c:forEach>
 </table>
